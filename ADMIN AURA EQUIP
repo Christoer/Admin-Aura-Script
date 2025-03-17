@@ -1,0 +1,23 @@
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+
+local window = DrRayLibrary:Load("Carlos Hub", "Default")
+
+local tab = DrRayLibrary.newTab("Admin Aura", "ImageIdHere")
+
+tab.newButton("Equip Super Mega Energy Balls", "Prints Hello!", function()
+local args = {
+    [1] = "Super Mega Energy Balls",
+    [2] = "1"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Equip_AURA:FireServer(unpack(args))
+end)
+
+tab.newButton("Equip Energy Balls", "Prints Hello!", function()
+local args = {
+    [1] = "Energy Balls",
+    [2] = "1"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Equip_AURA:FireServer(unpack(args))
+end)
